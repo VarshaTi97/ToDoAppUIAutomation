@@ -7,8 +7,15 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
+//class to read data from excel sheet
 public class ExcelUtility {
 
+    /*
+    * Returns data from Excel sheet in form of 2D string array
+    * param: filePath - location of Excel sheet
+    * param: sheetName - name of sheet to read
+    * return: String[][]
+    * */
     public static String[][] getData(String filePath, String sheetName) {
         String[][] data = null;
         XSSFWorkbook workbook = null;

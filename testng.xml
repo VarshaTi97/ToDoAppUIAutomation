@@ -3,21 +3,11 @@
 <suite name="All Test Suite">
     <listeners>
         <listener class-name="listeners.TestCaseListeners"></listener>
+        <listener class-name="listeners.AnnotationTransformer"></listener>
     </listeners>
     <test verbose="2" preserve-order="true" name="/Users/varsha.tiwari/Documents/Appium_Resources/ToDoAppUIAuotmation">
         <classes>
-            <class name="testScripts.HomePageTest">
-                <methods>
-                    <include name="testAddMultipleItemsAndRemoveMultiple"/>
-<!--                    <include name="testAddSingleItemToTheList"/>-->
-<!--                    <include name="editTextOfItemPresentInList"/>-->
-<!--                    <include name="removeItemFromList"/>-->
-<!--                    <include name="markItemAsCompletedAndClearFromList"/>-->
-<!--                    <include name="testAddingEmptyString"/>-->
-<!--                    <include name="testAddingStringWithTrailingSpaces"/>-->
-<!--                    <include name="testAdditionOfMultipleItemsAndSequence"/>-->
-                </methods>
-            </class>
+            <class name="testScripts.HomePageTest"/>
         </classes>
     </test>
 </suite>

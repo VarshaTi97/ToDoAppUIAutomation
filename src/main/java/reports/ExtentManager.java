@@ -11,9 +11,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 import org.testng.ITestResult;
 import utils.DateUtility;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-
+//class to handle extent reporting
 public class ExtentManager {
 
     private static final ExtentReports extentReports = new ExtentReports();
@@ -32,6 +30,7 @@ public class ExtentManager {
         extentReports.attachReporter(reporter);
     }
 
+    //generate report name with current time stamp
     public static String getReportNameWithTimeStamp(){
         return "Test_Execution_Report_" + DateUtility.getCurrentTimestamp() + ".html";
     }

@@ -1,9 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 5.908 sec <<< FAILURE! - in TestSuite
-tearDown(testScripts.HomePageTest)  Time elapsed: 5.377 sec  <<< FAILURE!
-java.lang.AssertionError: 
-The following asserts failed:
-	expected [true] but found [false]
-
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 43.781 sec - in TestSuite

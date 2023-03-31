@@ -2,14 +2,13 @@ package testScripts;
 
 import constants.Filepath;
 import lombok.Data;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.DataProvider;
+import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
 import pages.HomePage;
 import utils.ExcelUtility;
 import utils.RandomData;
 
+//Parent class of all the test classes
 public class BaseTest {
     protected HomePage homePage;
     protected SoftAssert softAssert;

@@ -1,7 +1,6 @@
 package constants;
 
-import java.io.File;
-
+//Contains all the file paths used in script
 public class Filepath {
 
     public static final String CONFIG_FILE_PATH = "src/main/resources/config.properties";
