@@ -1,6 +1,6 @@
 ## ToDoList App Automated Functional Tests ##
 
-This is a maven project repository which contains the test scripts, page objects, and test data for testing functional flows of ToDoApp. It is a hybrid driven framework which incorporates data driven approach along with different design patterns like Singleton and POM.
+This is a maven project repository which contains the test scripts, page objects, and test data for testing functional flows of ToDoApp. It is a `hybrid driven framework` which incorporates data driven approach along with different design patterns like `Singleton and POM`.
 These scripts test functional workflows on popular web browsers such as Firefox and Chrome
 Target URL is: https://todomvc.com/examples/angular2/
 
