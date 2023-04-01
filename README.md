@@ -1,7 +1,6 @@
 ## ToDoList App Automated Functional Tests ##
 
-This is a maven project repository which contains the test scripts, page objects, and test data for testing 
-functional flows of ToDoApp.
+This is a maven project repository which contains the test scripts, page objects, and test data for testing functional flows of ToDoApp. It is a hybrid driven framework which incorporates data driven approach along with different design patterns like Singleton and POM.
 These scripts test functional workflows on popular web browsers such as Firefox and Chrome
 Target URL is: https://todomvc.com/examples/angular2/
 
@@ -127,7 +126,7 @@ Open the terminal and execute commands using options like:
    | Chrome    |  local    |  mvn clean test -DbrowserName=chrome -DexecutionType=local           |
    | FireFox   |  local    |  mvn clean test -DbrowserName=firefox -DexecutionType=local          |
    | Chrome    |  grid     |  mvn clean test -DbrowserName=chrome -DexecutionType=grid            |
-   | FireFox   |  grid     |  mvn clean test -DbrowserName=firefox -DexecutionType=grid            |
+   | FireFox   |  grid     |  mvn clean test -DbrowserName=firefox -DexecutionType=grid           |
    ```
 ### Execution Report ###
 
