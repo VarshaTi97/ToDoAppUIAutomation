@@ -3,7 +3,7 @@ package pages;
 import base.PredefinedActions;
 import constants.Filepath;
 import org.openqa.selenium.WebElement;
-import reports.ExtentManager;
+import reporting.ExtentManager;
 import utils.PropertyFileReader;
 import java.util.List;
 

@@ -12,7 +12,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import reports.ExtentManager;
+import reporting.ExtentManager;
 import utils.PropertyFileReader;
 import java.net.MalformedURLException;
 import java.net.URL;

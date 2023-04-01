@@ -5,20 +5,19 @@ import constants.Filepath;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import reports.ExtentManager;
+import reporting.ExtentManager;
 import utils.PropertyFileReader;
 
 //Listener class
 public class TestCaseListeners extends PredefinedActions implements ITestListener{
-    String browser, env;
+    String browser, env, execution;
 
     public void onTestStart(ITestResult result) {
         //Driver initialization and browser launch code
         ExtentManager.createTestCase(result);
-        String executionMode = PropertyFileReader.getValue(Filepath.CONFIG_FILE_PATH, "executionType");
-        if (executionMode.equals("local"))
+        if (execution.equals("local"))
             startBrowser(browser, env);
-        else if(executionMode.equals("container")){
+        else if(execution.equals("grid")){
             try {
                 startRemoteBrowser(browser, env);
             }catch(Exception e){
@@ -56,12 +55,15 @@ public class TestCaseListeners extends PredefinedActions implements ITestListene
                 PropertyFileReader.getValue(Filepath.CONFIG_FILE_PATH, "browserType") : System.getProperty("browserType");
         // read env from commandline or config file
         env = System.getProperty("env") == null ? "qa" : System.getProperty("env");
+        execution = System.getProperty("executionType") == null ?
+                PropertyFileReader.getValue(Filepath.CONFIG_FILE_PATH, "executionType"):
+                System.getProperty("executionType");
         String filename = ExtentManager.getReportNameWithTimeStamp();
         //Extent report file name
         String fullPath = System.getProperty("user.dir")+ "/reports/" + filename;
         //Initialization of extent report instance
         ExtentManager.initExtentReports(fullPath, "ToDo App UI Automation Report",
-                "UI Test Execution");
+                "UI Test Execution", env, browser, execution);
     }
 
     public void onFinish(ITestContext context) {

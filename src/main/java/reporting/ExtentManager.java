@@ -1,4 +1,4 @@
-package reports;
+package reporting;
 
 import base.PredefinedActions;
 import com.aventstack.extentreports.ExtentReports;
@@ -16,7 +16,8 @@ public class ExtentManager {
 
     private static final ExtentReports extentReports = new ExtentReports();
     private static ExtentTest extentTest;
-    public static void initExtentReports(String fileName, String reportName, String documentTitle) {
+    public static void initExtentReports(String fileName, String reportName, String documentTitle, String executionEnv,
+                                         String browserName, String platform) {
         ExtentSparkReporter reporter = new ExtentSparkReporter(fileName);
         reporter.config().setReportName("Reporter : " + System.getProperty("user.name"));
         reporter.config().setTheme(Theme.STANDARD);
@@ -25,8 +26,9 @@ public class ExtentManager {
         reporter.config().setEncoding("UTF-8");
         extentReports.setSystemInfo("Java Version", System.getProperty("java.version"));
         extentReports.setSystemInfo("Author", System.getProperty("user.name").toUpperCase());
-        extentReports.setSystemInfo("Execution Env", "PROD");
-        extentReports.setSystemInfo("OS", System.getProperty("os.name"));
+        extentReports.setSystemInfo("Execution Env", executionEnv);
+        extentReports.setSystemInfo("Browser", browserName);
+        extentReports.setSystemInfo("Execution Type", platform);
         extentReports.attachReporter(reporter);
     }
 
