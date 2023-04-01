@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="listeners.TestCaseListeners"/>
+    <listener class-name="listeners.AnnotationTransformer"/>
+  </listeners>
+  <test thread-count="5" name="/Users/varsha.tiwari/Documents/Appium_Resources/ToDoAppUIAuotmation(failed)" verbose="0">
+    <classes>
+      <class name="testScripts.HomePageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="testAddMultipleItemsAndMarkMultipleAsDone" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- testScripts.HomePageTest -->
+    </classes>
+  </test> <!-- /Users/varsha.tiwari/Documents/Appium_Resources/ToDoAppUIAuotmation(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->
