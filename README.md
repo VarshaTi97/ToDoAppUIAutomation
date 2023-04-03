@@ -78,6 +78,7 @@ Following are the list of libraries used while building the framework:
    ```
    | Library Name      | Version  | Description                                                                                                 |
    | :---------------- | :------- | :-----------------------------------------------------------------------------------------------------------|
+   | java              | 17.0.2   | Programming language                                                                                        |
    | testng            | 7.4.0    | Testing framework which supports test configured by annotations, data-driven testing, parametric tests, etc.|
    | selenium          | 3.141.59 | It is a browser automation tool.                                                                            |
    | extentreports     | 5.0.6    | Used for creation of interactive reports for every execution                                                |
@@ -110,7 +111,7 @@ Following are the list of libraries used while building the framework:
 
 ### Setup for execution on selenium-grid in docker environment ###
 
-1. Install docker desktop on system.
+1. Install docker desktop on system. `https://docs.docker.com/engine/install/`
 
 2. Execute following command to start selenium-grid containers:
    ```
